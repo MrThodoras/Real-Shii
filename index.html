@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Based on Device</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check the screen width
+            if (window.innerWidth <= 768) {
+                // Redirect to mobile version
+                window.location.href = "RealShiiMobile.html";
+            } else {
+                // Redirect to desktop version
+                window.location.href = "RealShii.html";
+            }
+        });
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>

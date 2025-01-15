@@ -47,7 +47,7 @@
             text-align: center;
             background: linear-gradient(to bottom, #121212, #292828);
             padding: 0;
-            margin-top: -150px;  /* Adjusted margin-top to move the content much higher */
+            margin-top: -150px; /* Adjusted margin-top to move the content much higher */
         }
         .hero h1 {
             font-size: 2.3rem;
@@ -89,17 +89,14 @@
             color: #ffffff;
         }
         .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+            gap: 10px; /* Spacing between cards */
         }
         .card {
             background-color: #1e1e1e;
             border-radius: 10px;
-            padding: 20px;
-            width: calc(50% - 40px);
-            max-width: 300px;
+            padding: 10px; /* Reduced padding for smaller cards */
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
@@ -112,12 +109,16 @@
             height: 120px;
             object-fit: cover;
             margin-bottom: 10px;
+            border-radius: 50%;
         }
         .card-container .card img {
-            border-radius: 50%; 
+            border-radius: 50%;
         }
         #music .card img {
             border-radius: 0;
+            width: 150px;
+           height: 150px;
+           margin-bottom: 5px; /
         }
         footer {
             text-align: center;
@@ -133,7 +134,6 @@
         footer a:hover {
             text-decoration: underline;
         }
-
         @keyframes fadeIn {
             0% {
                 opacity: 0;

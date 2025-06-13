@@ -175,12 +175,12 @@
  </style>
 
 <style>
-@media (max-width: 768px)/* mobile-specific styles */ {
+@media (max-width: 768px) {
     input[type="text"], input[type="password"], input[type="email"], button {
-        font-size: 14px;   /* Adjust font size for small screens */
-        padding: 8px;      /* Adjust padding */
-        width: 100%;       /* Ensure full width on mobile */
-        box-sizing: border-box; /* Avoid overflow */
+        font-size: 14px;  
+        padding: 8px;      
+        width: 100%;      
+        box-sizing: border-box; 
     }
 }
 </style>
@@ -292,22 +292,10 @@
         <a href="https://open.spotify.com/artist/6r9O4Qa0rGvAW3Ip4eHes7?si=XKhSqozHQ5-C832HqwtniA" target="_blank" class="cta-button">Meet</a>
       </div>
       <div class="artist-card">
-        <img src="Members\Riris\riris.png" alt="Riris" width="130" height="130">
-        <h3>Riris</h3>
-        <p>Manager</p>
-        <a href="https://www.instagram.com/_.8odoriss?igsh=MXRsMzgzajAzamR3Yg==" target="_blank" class="cta-button">Meet</a>
-      </div>
-      <div class="artist-card">
         <img src="Members\Petros\petran.png" alt="Petran" width="130" height="130">
         <h3>Darth Gatakis</h3>
         <p>Producer</p>
         <a href="https://open.spotify.com/artist/0KN8V7T80Hsb7RRXLwGlPD?si=QwZShKndTIO9tpNjsI9hsA" target="_blank" class="cta-button">Meet</a>
-      </div>
-      <div class="artist-card">
-        <img src="Members\Alequan\alequan.png" alt="Alequan" width="130" height="130">
-        <h3>Alequan</h3>
-        <p>Manager</p>
-        <a href="https://www.instagram.com/_.a1exandr0s._?igsh=MWM3ZGFwb21lMXhpNg==" target="_blank" class="cta-button">Meet</a>
       </div>
     </div>
   </section>
@@ -391,15 +379,14 @@
 
 <!-- 10min Submit Limmit Script -->
 <script>
-  // Get the current time (in milliseconds)
+
   const currentTime = new Date().getTime();
   const lastSubmissionTime = localStorage.getItem('lastSubmissionTime');
   
-  // Define the 10-minute (600000 ms) limit for submission
   const tenMinutes = 600000;
   
   if (lastSubmissionTime) {
-      // Check if the last submission was made within the last 10 minutes
+      
       if (currentTime - lastSubmissionTime < tenMinutes) {
           document.getElementById("submitBtn").disabled = true;
           document.getElementById("submitBtn").textContent = "You can submit again in " + Math.ceil((tenMinutes - (currentTime - lastSubmissionTime)) / 60000) + " minutes.";
@@ -407,7 +394,7 @@
       }
   }
   
-  // Handle form submission
+
   document.getElementById("contact").addEventListener("submit", function(event) {
       // Check if submission is allowed (within the 10-minute limit)
       if (lastSubmissionTime && currentTime - lastSubmissionTime < tenMinutes) {
